@@ -1,0 +1,17 @@
+{
+  "name": "hacker-rank-in-js",
+  "version": "1.0.0",
+  "description": "Hacker Rank’s Tests in JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:debug": "node --inspect node_modules/.bin/jest --runInBand",
+    "test:debug:watch": "node --inspect node_modules/.bin/jest --watch --runInBand"
+  },
+  "author": "Gustavo Saiani ",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^24.9.0"
+  }
+}
+
