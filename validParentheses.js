@@ -1,4 +1,22 @@
-// https://leetcode.com/problems/valid-parentheses/submissions/
+// https://leetcode.com/problems/valid-parentheses
+
+/*
+ * Not the solution I came up with,
+ * this one is about 3× faster because it's really O(n)
+const validParentheses = (s) => {
+    if (s === null || s.length <= 0) return true;
+    var cArr = s.split('');
+    var stack = [];
+    for (var c of cArr) {
+        if (c === '[') stack.push(']');
+        else if (c === '{') stack.push('}');
+        else if (c === '(') stack.push(')');
+        else if (stack.length === 0 || c !== stack.pop()) return false;
+    }
+    if (stack.length === 0) return true;
+    return false;
+};
+*/
 
 const invalidInitials = [')', ']', '}']
 
