@@ -60,6 +60,6 @@ test('{}{}()[] should return true', () => {
   expect(validParentheses('{}{}()[]')).toBeTruthy()
 })
 
-test.only('{}[{}]((){})(){} should return true', () => {
+test('{}[{}]((){})(){} should return true', () => {
   expect(validParentheses('{}[{}]((){})(){}')).toBeTruthy()
 })
