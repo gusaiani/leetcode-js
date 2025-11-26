@@ -11,7 +11,7 @@
   "author": "Gustavo Saiani ",
   "license": "MIT",
   "dependencies": {
-    "jest": "^24.9.0"
+    "jest": "^30.2.0"
   }
 }
 
