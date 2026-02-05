@@ -8,11 +8,8 @@
  */
 function twoSum(nums, target) {
   const indexByValue = new Map(); // value -> index
-  console.log(indexByValue);
 
   for (let i = 0; i < nums.length; i++) {
-    console.log(indexByValue);
-
     const current = nums[i];
     const complement = target - current;
 
@@ -21,7 +18,6 @@ function twoSum(nums, target) {
     }
 
     indexByValue.set(current, i);
-    console.log("---");
   }
 
   // Problem guarantees exactly one solution, so we never reach here
