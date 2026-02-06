@@ -1,19 +1,19 @@
-function romanToInteger(s) {
-  const symbols = {
-    'I': 1,
-    'V': 5,
-    'X': 10,
-    'L': 50,
-    'C': 100,
-    'D': 500,
-    'M': 1000
-  };
+const symbols = {
+  'I': 1,
+  'V': 5,
+  'X': 10,
+  'L': 50,
+  'C': 100,
+  'D': 500,
+  'M': 1000
+};
 
+function romanToInteger(s) {
   let total = 0;
 
   for (let i = 0; i < s.length; i++) {
     const currentVal = symbols[s[i]];
-    const nextVal = symbols[s[i + 1]];
+    const nextVal = symbols[s[i + 1]] ?? 0;
 
     if (currentVal < nextVal) {
         total -= currentVal;
