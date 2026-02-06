@@ -6,14 +6,18 @@ In this repo I work on Leetcode’s challenges in Javascript.
 
 ## Dependencies
 
-`node`
-
-`npm` or `yarn`
+`bun` (v1.0 or later)
 
 ## Install
 
-`yarn install` or `npm install`
+`bun install`
 
 ## Test
 
-`yarn test` or `npm test`
+`bun test`
+
+### Debug Tests
+
+`bun test:debug` - Run tests with debugger attached
+
+`bun test:debug:watch` - Run tests in watch mode with debugger attached
