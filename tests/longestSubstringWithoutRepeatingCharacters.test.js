@@ -1,4 +1,3 @@
-
 const solve = require('../longestSubstringWithoutRepeatingCharacters');
 
 test('First one', () => {
