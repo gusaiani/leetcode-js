@@ -15,7 +15,7 @@ function romanToInteger(s) {
     const currentVal = symbols[s[i]];
     const nextVal = symbols[s[i + 1]] ?? 0;
 
-    if (currentVa l < nextVal) {
+    if (currentVal < nextVal) {
         total -= currentVal;
     } else {
         total += currentVal;
