@@ -15,6 +15,8 @@ function lengthOfLastWord(string) {
       length++;
     }
   }
+
+  return length;
 }
 
 module.exports = lengthOfLastWord
