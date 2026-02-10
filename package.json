@@ -1,14 +1,16 @@
 {
-  "name": "leetcode",
+  "name": "hacker-rank-in-js",
   "version": "1.0.0",
-  "description": "Hacker Rank's Tests in JS",
+  "description": "Hacker Rank’s Tests in JS",
   "main": "index.js",
-  "private": true,
   "scripts": {
-    "test": "bun test",
-    "test:debug": "bun --inspect test",
-    "test:debug:watch": "bun --inspect test --watch"
+    "test": "jest",
+    "test:debug": "node --inspect node_modules/.bin/jest --runInBand",
+    "test:debug:watch": "node --inspect node_modules/.bin/jest --watch --runInBand"
   },
-  "author": "Gustavo Saiani",
-  "license": "MIT"
+  "author": "Gustavo Saiani ",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^30.2.0"
+  }
 }
