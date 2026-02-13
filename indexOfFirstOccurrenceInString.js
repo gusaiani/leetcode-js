@@ -1,5 +1,6 @@
 // https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/description/
 
+// eslint-disable-next-line no-unused-vars
 function indexOfFirstOccurrenceInStringWithSlice(haystack, needle) {
   if (needle === haystack) return 0;
   const possibilities = [];
@@ -7,9 +8,10 @@ function indexOfFirstOccurrenceInStringWithSlice(haystack, needle) {
   const haystackArray = [...haystack];
   const needleArray = [...needle];
 
-  for (let index = 0; index < haystackArray.length; index++) {
-    const char = haystackArray[index];
+  let tentativeIndex = null;
+  let numberOfCharsMatching = 0;
 
+  for (let index = 0; index < haystackArray.length; index++) {
     if (haystack[index] === needleArray[numberOfCharsMatching]) {
       if (needleArray.length === 1) {
         return index;
@@ -20,7 +22,7 @@ function indexOfFirstOccurrenceInStringWithSlice(haystack, needle) {
       } else {
         for (let p = 0; p < possibilities.length; p++) {
           if (possibilities[p].charsMatching === needleArray.length - 1) {
-            return p[i].index;
+            return possibilities[p].index;
           }
 
           if (possibilities[p].charsMatching === 0) {
@@ -37,6 +39,7 @@ function indexOfFirstOccurrenceInStringWithSlice(haystack, needle) {
     }
   }
 
+  void tentativeIndex;
   return -1;
 }
 

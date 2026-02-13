@@ -7,11 +7,18 @@
     "test": "bun test",
     "test:watch": "bun test --watch",
     "test:debug": "bun --inspect test --runInBand",
-    "test:debug:watch": "bun --inspect test --watch --runInBand"
+    "test:debug:watch": "bun --inspect test --watch --runInBand",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "author": "Gustavo Saiani ",
   "license": "MIT",
   "dependencies": {
     "jest": "^30.2.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.0.0",
+    "globals": "^17.3.0"
   }
 }

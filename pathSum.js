@@ -25,7 +25,7 @@ function hasPathSum(root, targetSum) {
     return targetSum === root.val;
   }
 
-  let newTarget = targetSum - root.val;
+  const newTarget = targetSum - root.val;
   return hasPathSum(root.left, newTarget) || hasPathSum(root.right, newTarget)
 }
 
