@@ -6,27 +6,27 @@ function wework(grid) {
 
     for (let j = 0; j < row.length; j++) {
       if (row[j] === 1) {
-        rooms++
+        rooms++;
 
         // Space accounted for
-        grid[i][j] = 'c'
-        const spacesToCheck = [[i, j]]
+        grid[i][j] = "c";
+        const spacesToCheck = [[i, j]];
 
         while (spacesToCheck.length) {
-          const [h, v] = spacesToCheck.shift()
+          const [h, v] = spacesToCheck.shift();
           const adjacentsToCheck = [
             [h - 1, v],
             [h + 1, v],
             [h, v - 1],
-            [h, v + 1]
-          ]
+            [h, v + 1],
+          ];
 
           for (let k = 0; k < adjacentsToCheck.length; k++) {
-            const [a, b] = adjacentsToCheck[k]
+            const [a, b] = adjacentsToCheck[k];
 
-            if (grid[a] && (grid[a][b] === 1)) {
-              spacesToCheck.push([a, b])
-              grid[a][b] = 'c'
+            if (grid[a] && grid[a][b] === 1) {
+              spacesToCheck.push([a, b]);
+              grid[a][b] = "c";
             }
           }
         }
@@ -34,7 +34,7 @@ function wework(grid) {
     }
   }
 
-  return rooms
+  return rooms;
 }
 
-module.exports = wework
+module.exports = wework;

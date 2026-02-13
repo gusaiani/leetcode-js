@@ -1,1 +1,1 @@
-npx eslint . && npx jest
+npx prettier --check . && npx eslint . && npx jest

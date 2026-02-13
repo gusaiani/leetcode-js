@@ -21,11 +21,11 @@
  */
 function findMedianSortedArrays(nums1, nums2) {
   if (nums1.length > nums2.length) {
-    [nums1, nums2] = [nums2, nums1]
+    [nums1, nums2] = [nums2, nums1];
   }
 
-  const m = nums1.length
-  const n = nums2.length
+  const m = nums1.length;
+  const n = nums2.length;
   const half = Math.floor((m + n + 1) / 2);
 
   let low = 0;
@@ -46,7 +46,7 @@ function findMedianSortedArrays(nums1, nums2) {
       } else {
         return (Math.max(nums1Left, nums2Left) + Math.min(nums1Right, nums2Right)) / 2;
       }
-    } else if (nums1Left> nums2Right) {
+    } else if (nums1Left > nums2Right) {
       hi = i - 1;
     } else {
       low = i + 1;

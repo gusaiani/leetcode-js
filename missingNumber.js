@@ -17,7 +17,7 @@ function missingNumber(nums) {
   let actualSum = 0;
 
   for (let i = 0; i < length; i++) {
-    actualSum += nums[i]
+    actualSum += nums[i];
   }
 
   return expectedSum - actualSum;

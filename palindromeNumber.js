@@ -6,12 +6,12 @@ function palindromeNumber(number) {
     if (array.length === 1) {
       return true;
     }
-    
+
     if (array.shift() !== array.pop()) {
       return false;
-    } 
+    }
   }
-  
+
   return true;
 }
 

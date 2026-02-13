@@ -1,11 +1,11 @@
 const symbols = {
-  'I': 1,
-  'V': 5,
-  'X': 10,
-  'L': 50,
-  'C': 100,
-  'D': 500,
-  'M': 1000
+  I: 1,
+  V: 5,
+  X: 10,
+  L: 50,
+  C: 100,
+  D: 500,
+  M: 1000,
 };
 
 function romanToInteger(s) {
@@ -16,14 +16,13 @@ function romanToInteger(s) {
     const nextVal = symbols[s[i + 1]] ?? 0;
 
     if (currentVal < nextVal) {
-        total -= currentVal;
+      total -= currentVal;
     } else {
-        total += currentVal;
+      total += currentVal;
     }
   }
 
   return total;
 }
 
-
-module.exports = romanToInteger
+module.exports = romanToInteger;

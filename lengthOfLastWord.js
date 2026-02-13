@@ -7,8 +7,8 @@ function lengthOfLastWord(string) {
     const char = array[index];
 
     if (char === " ") {
-      if (haveFoundFirstValidChar) { 
-        return length; 
+      if (haveFoundFirstValidChar) {
+        return length;
       }
     } else {
       haveFoundFirstValidChar = true;
@@ -19,4 +19,4 @@ function lengthOfLastWord(string) {
   return length;
 }
 
-module.exports = lengthOfLastWord
+module.exports = lengthOfLastWord;

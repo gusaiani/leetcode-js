@@ -23,8 +23,8 @@ test("merge two non-empty sorted lists", () => {
   const list2 = fromArray([1, 3, 4]);
   const merged = mergeTwoLists(list1, list2);
   expect(toArray(merged)).toEqual([1, 1, 2, 3, 4, 4]);
-  });
-  
+});
+
 // Example 2: list1 = [], list2 = [] → []
 test("merge two empty lists", () => {
   const merged = mergeTwoLists(null, null);

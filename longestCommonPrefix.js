@@ -6,7 +6,7 @@ function longestCommonPrefix(strings) {
   while (!hasDifferentPrefix) {
     let currentChar = "";
     let charsAreTheSame = true;
-    
+
     strings.forEach((string, stringIndex) => {
       if (stringIndex === 0) {
         const char = string.charAt(index);
@@ -17,7 +17,6 @@ function longestCommonPrefix(strings) {
         } else {
           currentChar = char;
         }
-      
       } else {
         const char = string.charAt(index);
         if (char !== currentChar) {
@@ -25,7 +24,7 @@ function longestCommonPrefix(strings) {
           hasDifferentPrefix = true;
         }
       }
-    })
+    });
 
     if (charsAreTheSame) {
       longestPrefix.push(currentChar);
@@ -37,4 +36,4 @@ function longestCommonPrefix(strings) {
   return longestPrefix.join("");
 }
 
-module.exports = longestCommonPrefix
+module.exports = longestCommonPrefix;

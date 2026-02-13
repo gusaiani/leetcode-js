@@ -1,5 +1,6 @@
 const js = require("@eslint/js");
 const globals = require("globals");
+const prettier = require("eslint-config-prettier");
 
 module.exports = [
   js.configs.recommended,
@@ -20,6 +21,7 @@ module.exports = [
       "prefer-const": "warn",
     },
   },
+  prettier,
   {
     ignores: ["node_modules/"],
   },

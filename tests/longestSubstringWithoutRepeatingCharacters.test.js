@@ -1,7 +1,7 @@
-const solve = require('../longestSubstringWithoutRepeatingCharacters');
+const solve = require("../longestSubstringWithoutRepeatingCharacters");
 
-test('First one', () => {
-  expect(solve("abcabcbb")).toBe(3)
+test("First one", () => {
+  expect(solve("abcabcbb")).toBe(3);
 });
 
 // test('Second one', () => {
