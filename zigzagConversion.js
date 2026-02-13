@@ -6,7 +6,7 @@ function zigzagConversion(s, numRows) {
   let x = 0;
   let y = 0;
   let goingDown = true;
-  const arrays = new Array(numRows).fill('');
+  const arrays = new Array(numRows).fill("");
 
   for (const char of s) {
     if (goingDown) {
@@ -34,7 +34,7 @@ function zigzagConversion(s, numRows) {
     }
   }
 
-  return arrays.join("");   
+  return arrays.join("");
 }
 
-module.exports = zigzagConversion
+module.exports = zigzagConversion;

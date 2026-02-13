@@ -26,7 +26,7 @@ function hasPathSum(root, targetSum) {
   }
 
   const newTarget = targetSum - root.val;
-  return hasPathSum(root.left, newTarget) || hasPathSum(root.right, newTarget)
+  return hasPathSum(root.left, newTarget) || hasPathSum(root.right, newTarget);
 }
 
 module.exports = { hasPathSum, TreeNode };

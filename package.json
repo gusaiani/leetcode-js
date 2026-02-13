@@ -10,6 +10,8 @@
     "test:debug:watch": "bun --inspect test --watch --runInBand",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "prepare": "husky"
   },
   "author": "Gustavo Saiani ",
@@ -20,7 +22,9 @@
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "eslint": "^10.0.0",
+    "eslint-config-prettier": "^10.1.8",
     "globals": "^17.3.0",
-    "husky": "^9.1.7"
+    "husky": "^9.1.7",
+    "prettier": "^3.8.1"
   }
 }

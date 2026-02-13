@@ -42,5 +42,5 @@ test("single node does not equal target sum", () => {
 test("target sum only at leaf, not at internal node", () => {
   const root = new TreeNode(1, new TreeNode(2), null);
   expect(hasPathSum(root, 1)).toBe(false); // 1 is not a leaf
-  expect(hasPathSum(root, 3)).toBe(true);  // 1→2 is a leaf path
+  expect(hasPathSum(root, 3)).toBe(true); // 1→2 is a leaf path
 });

@@ -1,7 +1,7 @@
 // https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
 
 function longestSubstringWithoutRepeatingCharacters(s) {
-  let maxLength = 0
+  let maxLength = 0;
   let left = 0;
 
   const charIndexMap = new Map();
@@ -25,4 +25,4 @@ function longestSubstringWithoutRepeatingCharacters(s) {
   return maxLength;
 }
 
-module.exports = longestSubstringWithoutRepeatingCharacters
+module.exports = longestSubstringWithoutRepeatingCharacters;
