@@ -7,7 +7,7 @@ function palindromeNumber(number) {
       return true;
     }
     
-    if (array.shift() != array.pop()) {
+    if (array.shift() !== array.pop()) {
       return false;
     } 
   }

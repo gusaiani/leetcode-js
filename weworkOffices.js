@@ -1,7 +1,7 @@
 function wework(grid) {
   let rooms = 0;
 
-  for (let i = 0; i < grid.length; i++) {
+  for (let i = 0; i < grid.length; i++) {
     const row = grid[i];
 
     for (let j = 0; j < row.length; j++) {
@@ -10,7 +10,7 @@ function wework(grid) {
 
         // Space accounted for
         grid[i][j] = 'c'
-        let spacesToCheck = [[i, j]]
+        const spacesToCheck = [[i, j]]
 
         while (spacesToCheck.length) {
           const [h, v] = spacesToCheck.shift()

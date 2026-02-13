@@ -1,5 +1,5 @@
 function longestCommonPrefix(strings) {
-  let longestPrefix = [];
+  const longestPrefix = [];
   let hasDifferentPrefix = false;
   let index = 0;
 

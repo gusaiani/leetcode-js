@@ -1,13 +1,10 @@
 function wework(grid) {
   let largestTable = 0
-  let height
-  let width
   let maxHeight
   let maxWidth
 
-  for (let i = 0; i < grid.length; i++) {
+  for (let i = 0; i < grid.length; i++) {
     const row = grid[i];
-    debugger
 
     for (let j = 0; j < row.length; j++) {
       if (row[j] === '1') {

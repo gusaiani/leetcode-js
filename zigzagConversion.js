@@ -6,8 +6,7 @@ function zigzagConversion(s, numRows) {
   let x = 0;
   let y = 0;
   let goingDown = true;
-  const arrays = new Array(numRows).fill('');;
-  let result = "";
+  const arrays = new Array(numRows).fill('');
 
   for (const char of s) {
     if (goingDown) {
