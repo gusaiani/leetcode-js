@@ -1,1 +1,1 @@
-npx biome check . && npx jest
+bunx biome check . && bun test
