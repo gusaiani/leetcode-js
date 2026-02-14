@@ -5,7 +5,9 @@
       "WebSearch",
       "Bash(./node_modules/.bin/biome check:*)",
       "Bash(./node_modules/.bin/biome format:*)",
-      "Bash(bun test:*)"
+      "Bash(bun test:*)",
+      "WebFetch(domain:leetcode.com)",
+      "Bash(ls:*)"
     ]
   }
 }
