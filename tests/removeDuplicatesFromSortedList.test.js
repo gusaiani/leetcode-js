@@ -1,7 +1,4 @@
-const {
-  deleteDuplicates,
-  ListNode,
-} = require("../removeDuplicatesFromSortedList");
+const { deleteDuplicates, ListNode } = require("../removeDuplicatesFromSortedList");
 
 function fromArray(arr) {
   if (arr.length === 0) return null;
