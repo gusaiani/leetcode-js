@@ -35,7 +35,6 @@ function wework(grid) {
               if (area > largestTable) {
                 largestTable = area;
               }
-              continue;
             }
           }
         }

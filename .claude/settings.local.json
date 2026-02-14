@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(./node_modules/.bin/biome init:*)",
+      "WebSearch",
+      "Bash(./node_modules/.bin/biome check:*)",
+      "Bash(./node_modules/.bin/biome format:*)",
+      "Bash(bun test:*)"
+    ]
+  }
+}
