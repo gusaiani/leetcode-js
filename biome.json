@@ -1,0 +1,30 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.3.15/schema.json",
+  "formatter": {
+    "lineWidth": 100,
+    "indentWidth": 2,
+    "indentStyle": "space"
+  },
+  "javascript": {
+    "formatter": {
+      "semicolons": "always",
+      "quoteStyle": "double",
+      "trailingCommas": "all"
+    }
+  },
+  "linter": {
+    "rules": {
+      "style": {
+        "useConst": "warn"
+      },
+      "suspicious": {
+        "noVar": "error",
+        "noDoubleEquals": "warn"
+      },
+      "correctness": {
+        "noUnusedVariables": "warn",
+        "noConstantCondition": "off"
+      }
+    }
+  }
+}

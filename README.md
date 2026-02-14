@@ -44,13 +44,12 @@ bun install
 | `bun test --watch`     | Run tests in watch mode            |
 | `bun run lint`         | Check for linting errors           |
 | `bun run lint:fix`     | Auto-fix linting errors            |
-| `bun run format`       | Format all files with Prettier     |
+| `bun run format`       | Format all files with Biome        |
 | `bun run format:check` | Check formatting without modifying |
 
 ## Code Quality
 
 - **Testing** — Every solution has a dedicated test file ([Jest](https://jestjs.io/)-compatible, run via [Bun](https://bun.sh/))
-- **Linting** — [ESLint](https://eslint.org/) with recommended rules
-- **Formatting** — [Prettier](https://prettier.io/) for consistent style
+- **Linting & Formatting** — [Biome](https://biomejs.dev/) for linting and consistent style
 - **CI** — GitHub Actions run tests, linting, and format checks on every PR
 - **Pre-push hook** — [Husky](https://typicode.github.io/husky/) blocks pushes that fail tests, linting, or formatting

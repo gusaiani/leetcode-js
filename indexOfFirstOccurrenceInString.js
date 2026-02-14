@@ -1,7 +1,7 @@
 // https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/description/
 
 // eslint-disable-next-line no-unused-vars
-function indexOfFirstOccurrenceInStringWithSlice(haystack, needle) {
+function _indexOfFirstOccurrenceInStringWithSlice(haystack, needle) {
   if (needle === haystack) return 0;
   const possibilities = [];
 

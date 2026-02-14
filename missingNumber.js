@@ -1,7 +1,7 @@
 // https://leetcode.com/problems/missing-number/description/
 
 // eslint-disable-next-line no-unused-vars
-function missingNumberSlow(nums) {
+function _missingNumberSlow(nums) {
   const sortedNums = nums.sort((a, b) => a - b);
 
   for (let index = 0; index <= sortedNums.length; index++) {
