@@ -7,9 +7,9 @@
  */
 
 function TreeNode(val, left, right) {
-	this.val = val === undefined ? 0 : val;
-	this.left = left === undefined ? null : left;
-	this.right = right === undefined ? null : right;
+  this.val = val === undefined ? 0 : val;
+  this.left = left === undefined ? null : left;
+  this.right = right === undefined ? null : right;
 }
 
 /**
@@ -18,27 +18,31 @@ function TreeNode(val, left, right) {
  */
 
 function levelOrder(root) {
-	if (!root) return [];
+  // If the tree is empty, return an empty array
+  if (!root) return [];
 
-	const result = [];
-	const queue = [root];
+  const result = [];
+  const queue = [root]; // Initialize queue with the root node
 
-	while (queue.length > 0) {
-		const levelSize = queue.length;
-		const currentLevelNodes = [];
+  while (queue.length > 0) {
+    const levelSize = queue.length; // Number of nodes at the current level
+    const currentLevelNodes = [];
 
-		for (let i = 0; i < levelSize; i++) {
-			const node = queue.shift;
-			currentLevelNodes.push(node.val);
+    for (let i = 0; i < levelSize; i++) {
+      const node = queue.shift(); // Remove the front node
 
-			if (node.left) queue.push(node.left);
-			if (node.right) queue.push(node.right)
-		}
+      currentLevelNodes.push(node.val); // Add node value to current level
 
-		result.push(currentLevelNodes);
-	}
+      // Add children to the queue for the next level
+      if (node.left) queue.push(node.left);
+      if (node.right) queue.push(node.right);
+    }
 
-	return result;
+    // After processing all nodes at this level, add it to the result
+    result.push(currentLevelNodes);
+  }
+
+  return result;
 }
 
 module.exports = { levelOrder, TreeNode };
