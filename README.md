@@ -28,6 +28,7 @@ Solutions to LeetCode problems in JavaScript, each with a test suite.
 | 66   | [Plus One](https://leetcode.com/problems/plus-one/)                                                                                     | Easy       | Right-to-left carry    | O(n)             | O(1)         |
 | 83   | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)                                 | Easy       | Iterative skip         | O(n)             | O(1)         |
 | 112  | [Path Sum](https://leetcode.com/problems/path-sum/)                                                                                     | Easy       | DFS recursion          | O(n)             | O(h)         |
+| 206  | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)                                                               | Easy       | Iterative reversal     | O(n)             | O(1)         |
 | 268  | [Missing Number](https://leetcode.com/problems/missing-number/)                                                                         | Easy       | Gauss sum formula      | O(n)             | O(1)         |
 | 3379 | [Transformed Array](https://leetcode.com/problems/transformed-array/)                                                                   | Easy       | Modular arithmetic     | O(n)             | O(n)         |
 
