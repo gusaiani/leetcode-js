@@ -15,6 +15,19 @@
  * @param {number} amount
  * @return {number}
  */
-function coinChange(coins, amount) {}
+function coinChange(coins, amount) {
+  const minCoinsForAmount = new Array(amount + 1).fill(Infinity);
+  minCoinsForAmount[0] = 0;
+
+  for (let i = 1; i <= amount; i++) {
+    for (const coin of coins) {
+      if (coin <= i) {
+        minCoinsForAmount[i] = Math.min(minCoinsForAmount[i], minCoinsForAmount[i - coin] + 1);
+      }
+    }
+  }
+
+  return minCoinsForAmount[amount] === Infinity ? -1 : minCoinsForAmount[amount];
+}
 
 module.exports = { coinChange };

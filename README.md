@@ -31,6 +31,7 @@ Solutions to LeetCode problems in JavaScript, each with a test suite.
 | 112  | [Path Sum](https://leetcode.com/problems/path-sum/)                                                                                     | Easy       | DFS recursion          | O(n)             | O(h)         |
 | 206  | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)                                                               | Easy       | Iterative reversal     | O(n)             | O(1)         |
 | 268  | [Missing Number](https://leetcode.com/problems/missing-number/)                                                                         | Easy       | Gauss sum formula      | O(n)             | O(1)         |
+| 322  | [Coin Change](https://leetcode.com/problems/coin-change/)                                                                               | Medium     | Dynamic programming    | O(n × amount)    | O(amount)    |
 | 3379 | [Transformed Array](https://leetcode.com/problems/transformed-array/)                                                                   | Easy       | Modular arithmetic     | O(n)             | O(n)         |
 
 ## Setup
