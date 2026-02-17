@@ -7,8 +7,15 @@
       "name": "Debug Current Bun Test",
       "program": "${file}",
       "cwd": "${workspaceFolder}",
-      "runtime": "bun",
-      "runtimeArgs": ["test"]
+      "runtimeArgs": ["test", "--runInBand"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Current Jest Test (Node)",
+      "program": "${workspaceFolder}/node_modules/.bin/jest",
+      "args": ["${file}", "--runInBand"],
+      "console": "integratedTerminal"
     }
   ]
 }
