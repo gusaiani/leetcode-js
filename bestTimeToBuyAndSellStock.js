@@ -32,7 +32,7 @@ function maxProfit(prices) {
   return maxProfit;
 }
 
-// eslint-disable-next-line no-unused-vars
+/*
 function maxProfitSlow(prices) {
   if (prices.length <= 1) return 0;
 
@@ -48,5 +48,6 @@ function maxProfitSlow(prices) {
 
   return profit;
 }
+*/
 
 module.exports = { maxProfit };
