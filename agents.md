@@ -1,3 +1,42 @@
+## Project structure
+
+- Implementation files: `/<problemName>.js` (e.g., `jumpGame.js`)
+- Test files: `/tests/<problemName>.test.js` (e.g., `tests/jumpGame.test.js`)
+- Branch name: kebab-case problem name (e.g., `number-of-islands`)
+
+Implementation file template:
+```js
+/**
+ * LeetCode <number>. <Title>
+ * <url>
+ *
+ * <problem description>
+ */
+
+/**
+ * @param {<type>} <param>
+ * @return {<type>}
+ */
+function <functionName>(<params>) {}
+
+module.exports = { <functionName> };
+```
+
+Test file template:
+```js
+const { <functionName> } = require("../<problemName>");
+
+test("<description>", () => {
+  expect(<functionName>(<input>)).toBe(<expected>);
+});
+```
+
+## Solved problems
+
+Read `README.md` — the "Solved Problems" table is the source of truth for which problems are already solved and what patterns/approaches they cover. Use the Approach column to infer covered patterns when doing gap analysis.
+
+---
+
 Use the term "Stub challenge" as a command to
 
 - create a branch
