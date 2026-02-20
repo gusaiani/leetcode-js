@@ -25,8 +25,7 @@ function numIslands(grid) {
    * Helper to recursively sink all connected land pieces
    */
   const sinkDiscoveryLandMass = (row, col) => {
-    const isOutOfBounds =
-      row < 0 || row >= totalRows || col < 0 || col >= totalColumns;
+    const isOutOfBounds = row < 0 || row >= totalRows || col < 0 || col >= totalColumns;
 
     if (isOutOfBounds || grid[row][col] === "0") {
       return;
