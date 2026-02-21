@@ -40,6 +40,7 @@ Solutions to LeetCode problems in JavaScript, each with a test suite.
 | 268  | [Missing Number](https://leetcode.com/problems/missing-number/)                                                                         | Easy       | Gauss sum formula      | O(n)             | O(1)         |
 | 283  | [Move Zeroes](https://leetcode.com/problems/move-zeroes/)                                                                               | Easy       | Two pointers           | O(n)             | O(1)         |
 | 322  | [Coin Change](https://leetcode.com/problems/coin-change/)                                                                               | Medium     | Dynamic programming    | O(n × amount)    | O(amount)    |
+| 347  | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)                                                       | Medium     | Hash map + sort        | O(n log n)       | O(n)         |
 | 3379 | [Transformed Array](https://leetcode.com/problems/transformed-array/)                                                                   | Easy       | Modular arithmetic     | O(n)             | O(n)         |
 
 ## Setup
