@@ -1,1 +1,1 @@
-BIOME_BINARY=@biomejs/cli-darwin-arm64/biome ./node_modules/.bin/biome check . && npx jest
+./node_modules/.bin/biome check . && npx jest
