@@ -27,13 +27,9 @@ function rob(houseValues) {
   let maximumProfitFromOneHouseAgo = 0;
 
   for (const currentHouseValue of houseValues) {
-    const currentTotalIfRobbed =
-      currentHouseValue + maximumProfitFromTwoHousesAgo;
+    const currentTotalIfRobbed = currentHouseValue + maximumProfitFromTwoHousesAgo;
 
-    const bestProfitAtCurrentStep = Math.max(
-      currentTotalIfRobbed,
-      maximumProfitFromOneHouseAgo,
-    );
+    const bestProfitAtCurrentStep = Math.max(currentTotalIfRobbed, maximumProfitFromOneHouseAgo);
 
     maximumProfitFromTwoHousesAgo = maximumProfitFromOneHouseAgo;
 
