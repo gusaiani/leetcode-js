@@ -13,7 +13,17 @@
  * @param {number[]} nums
  * @return {number}
  */
-function singleNumber(nums) {
+const singleNumber = (nums) => {
+  let result = 0;
+
+  for (const num of nums) {
+    result ^= num; // Bitwise XOR assignment
+  }
+
+  return result;
+};
+/*
+function singleNumberSlow(nums) {
   const set = new Set();
 
   for (let i = 0; i < nums.length; i++) {
@@ -28,5 +38,6 @@ function singleNumber(nums) {
 
   return firstValue;
 }
+*/
 
 module.exports = { singleNumber };
