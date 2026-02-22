@@ -41,18 +41,10 @@ function solveNQueens(n) {
     for (let currentColumn = 0; currentColumn < n; currentColumn++) {
       // Check if placing a queen here would result in it being attacked
       const isColumnOccupied = occupiedColumns.has(currentColumn);
-      const isPositiveDiagonalOccupied = occupiedPositiveDiagonals.has(
-        currentRow + currentColumn,
-      );
-      const isNegativeDiagonalOccupied = occupiedNegativeDiagonals.has(
-        currentRow - currentColumn,
-      );
+      const isPositiveDiagonalOccupied = occupiedPositiveDiagonals.has(currentRow + currentColumn);
+      const isNegativeDiagonalOccupied = occupiedNegativeDiagonals.has(currentRow - currentColumn);
 
-      if (
-        isColumnOccupied ||
-        isPositiveDiagonalOccupied ||
-        isNegativeDiagonalOccupied
-      ) {
+      if (isColumnOccupied || isPositiveDiagonalOccupied || isNegativeDiagonalOccupied) {
         continue; // This square is under attack, skip to the next column
       }
 

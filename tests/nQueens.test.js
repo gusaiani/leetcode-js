@@ -1,8 +1,7 @@
 const { solveNQueens } = require("../nQueens");
 
 // Solutions may come in any order — sort boards for stable comparison
-const normalize = (solutions) =>
-  solutions.map((board) => board.join("|")).sort();
+const normalize = (solutions) => solutions.map((board) => board.join("|")).sort();
 
 // n=1: single queen fills the only cell
 test("n=1 has one solution", () => {
@@ -20,7 +19,7 @@ test("n=3 has no solutions", () => {
 });
 
 // n=4: exactly two solutions
-test.only("n=4 returns exactly 2 solutions", () => {
+test("n=4 returns exactly 2 solutions", () => {
   expect(solveNQueens(4)).toHaveLength(2);
 });
 
