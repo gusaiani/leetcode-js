@@ -33,10 +33,7 @@ function maxSubArray(numbers) {
      * previous subarray was "dragging us down" (negative), so we discard
      * it and start a fresh subarray at the current number.
      */
-    currentSubarraySum = Math.max(
-      currentNumber,
-      currentSubarraySum + currentNumber,
-    );
+    currentSubarraySum = Math.max(currentNumber, currentSubarraySum + currentNumber);
 
     // After updating the current subarray, we check if it's the best we've ever seen.
     if (currentSubarraySum > highestSumFoundSoFar) {
