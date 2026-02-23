@@ -8,10 +8,29 @@
  */
 
 /**
- * @param {number[]} nums
+ * @param {number[]}
  * @return {number}
  */
 
+// Boyer-Moore Voting Algorithm.
+const majorityElement = (nums) => {
+  let candidate = null;
+  let count = 0;
+
+  for (const num of nums) {
+    // If count is 0, we need a new candidate
+    if (count === 0) {
+      candidate = num;
+    }
+
+    // If current number matches candidate, increment.
+    // Otherwise, "cancel" it out by decrementing.
+    count += num === candidate ? 1 : -1;
+  }
+
+  return candidate;
+};
+/*
 function majorityElement(nums) {
   if (nums.length === 1) {
     return nums[0];
@@ -31,5 +50,6 @@ function majorityElement(nums) {
     }
   }
 }
+*/
 
 module.exports = { majorityElement };
