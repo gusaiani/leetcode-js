@@ -21,7 +21,7 @@ function subarraySumEqualsK(nums, k) {
   let totalSubarrays = 0;
   let runningSum = 0;
 
-  for (let num of nums) {
+  for (const num of nums) {
     runningSum += num;
 
     // The value we need to have seen previously to make the current subarray sum to k
