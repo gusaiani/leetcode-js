@@ -55,6 +55,7 @@ Solutions to LeetCode problems in JavaScript, each with a test suite.
 | 283  | [Move Zeroes](https://leetcode.com/problems/move-zeroes/)                                                                               | Easy       | Two pointers           | O(n)             | O(1)         |
 | 322  | [Coin Change](https://leetcode.com/problems/coin-change/)                                                                               | Medium     | Dynamic programming    | O(n × amount)    | O(amount)    |
 | 347  | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)                                                       | Medium     | Hash map + sort        | O(n log n)       | O(n)         |
+| 392  | [Is Subsequence](https://leetcode.com/problems/is-subsequence/)                                                                         | Easy       | Two pointers           | O(n)             | O(n)         |
 | 560  | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)                                                           | Medium     | Prefix sum + hash map  | O(n)             | O(n)         |
 | 3379 | [Transformed Array](https://leetcode.com/problems/transformed-array/)                                                                   | Easy       | Modular arithmetic     | O(n)             | O(n)         |
 
