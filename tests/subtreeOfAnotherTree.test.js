@@ -39,10 +39,6 @@ test("single-node subRoot not found", () => {
 
 // subRoot is a leaf at deepest level
 test("subRoot is a leaf deep in tree", () => {
-  const root = new TreeNode(
-    1,
-    new TreeNode(2, new TreeNode(4), new TreeNode(5)),
-    new TreeNode(3),
-  );
+  const root = new TreeNode(1, new TreeNode(2, new TreeNode(4), new TreeNode(5)), new TreeNode(3));
   expect(isSubtree(root, new TreeNode(4))).toBe(true);
 });
