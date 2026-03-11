@@ -61,6 +61,7 @@ Solutions to LeetCode problems in JavaScript, each with a test suite.
 | 461  | [Hamming Distance](https://leetcode.com/problems/hamming-distance/)                                                                     | Easy       | XOR + bit count        | O(1)             | O(1)         |
 | 543  | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)                                                       | Easy       | DFS recursion          | O(n)             | O(h)         |
 | 560  | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)                                                           | Medium     | Prefix sum + hash map  | O(n)             | O(n)         |
+| 572  | [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/)                                                       | Easy       | DFS recursion          | O(m × n)         | O(h)         |
 | 3379 | [Transformed Array](https://leetcode.com/problems/transformed-array/)                                                                   | Easy       | Modular arithmetic     | O(n)             | O(n)         |
 
 ## Setup
