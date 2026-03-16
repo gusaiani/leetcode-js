@@ -15,7 +15,7 @@
  * You must implement a solution with O(1) time complexity for each function.
  */
 
-var MinStack = function () {
+const MinStack = function () {
   this.stack = [];
   this.minStack = [];
 };
