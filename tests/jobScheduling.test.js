@@ -1,15 +1,11 @@
 const { jobScheduling } = require("../jobScheduling");
 
 test("example 1 — overlapping jobs", () => {
-  expect(
-    jobScheduling([1, 2, 3, 3], [3, 4, 5, 6], [50, 10, 40, 70]),
-  ).toBe(120);
+  expect(jobScheduling([1, 2, 3, 3], [3, 4, 5, 6], [50, 10, 40, 70])).toBe(120);
 });
 
 test("example 2 — all overlapping, pick best two", () => {
-  expect(
-    jobScheduling([1, 2, 3, 4, 6], [3, 5, 10, 6, 9], [20, 20, 100, 70, 60]),
-  ).toBe(150);
+  expect(jobScheduling([1, 2, 3, 4, 6], [3, 5, 10, 6, 9], [20, 20, 100, 70, 60])).toBe(150);
 });
 
 test("example 3 — non-overlapping jobs", () => {

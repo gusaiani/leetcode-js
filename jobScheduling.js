@@ -78,11 +78,9 @@ function jobScheduling(startTime, endTime, profit) {
 }
 */
 
-var jobScheduling = function (startTime, endTime, profit) {
+const jobScheduling = (startTime, endTime, profit) => {
   const n = startTime.length;
 
-  // 1. Use a 2D array instead of objects for faster access
-  const jobs = new Int32Array(n * 3);
   const indices = new Int32Array(n).map((_, i) => i);
 
   // Sort indices based on endTime to avoid moving large objects around
@@ -99,7 +97,7 @@ var jobScheduling = function (startTime, endTime, profit) {
 
     // Find the latest job that ends BEFORE this job starts
     // We search in the already processed jobs (0 to i-1)
-    let prevJobIdx = binarySearch(indices, endTime, currStart, i);
+    const prevJobIdx = binarySearch(indices, endTime, currStart, i);
 
     // Transition: Max(Profit without this job, Profit with this job + best previous)
     dp[i + 1] = Math.max(dp[i], currProfit + dp[prevJobIdx + 1]);
@@ -114,7 +112,7 @@ function binarySearch(indices, endTime, targetStart, high) {
   high = high - 1;
 
   while (low <= high) {
-    let mid = (low + high) >>> 1;
+    const mid = (low + high) >>> 1;
     if (endTime[indices[mid]] <= targetStart) {
       res = mid;
       low = mid + 1;
