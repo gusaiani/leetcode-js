@@ -70,7 +70,7 @@ class Trie {
    */
   search(word) {
     const node = this._traverse(word);
-    return node !== null && node.isEnd;
+    return node?.isEnd ?? false;
   }
 
   /**
