@@ -42,6 +42,7 @@ Use the term "Stub challenge" as a command to
 - create a branch
 - implement a test file
 - stub an implementation file for a given challenge.
+- open Cursor with the test file and the implementation file: `cursor tests/<problemName>.test.js <problemName>.js`
 
 Do not give hints about how to solve the problem.
 
