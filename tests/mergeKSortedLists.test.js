@@ -23,11 +23,7 @@ function listToArray(head) {
 }
 
 test("example 1 — three sorted lists", () => {
-  const lists = [
-    arrayToList([1, 4, 5]),
-    arrayToList([1, 3, 4]),
-    arrayToList([2, 6]),
-  ];
+  const lists = [arrayToList([1, 4, 5]), arrayToList([1, 3, 4]), arrayToList([2, 6])];
   expect(listToArray(mergeKLists(lists))).toEqual([1, 1, 2, 3, 4, 4, 5, 6]);
 });
 
@@ -45,9 +41,6 @@ test("single list", () => {
 });
 
 test("lists with negative values", () => {
-  const lists = [
-    arrayToList([-2, -1, 0]),
-    arrayToList([-3, 5]),
-  ];
+  const lists = [arrayToList([-2, -1, 0]), arrayToList([-3, 5])];
   expect(listToArray(mergeKLists(lists))).toEqual([-3, -2, -1, 0, 5]);
 });

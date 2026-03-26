@@ -17,16 +17,16 @@ function ListNode(val, next) {
  * @param {ListNode[]} lists
  * @return {ListNode}
  */
-var mergeKLists = function (lists) {
+const mergeKLists = (lists) => {
   if (lists.length === 0) return null;
 
   // Continue merging pairs until only one list remains
   while (lists.length > 1) {
-    let mergedLists = [];
+    const mergedLists = [];
 
     for (let i = 0; i < lists.length; i += 2) {
-      let l1 = lists[i];
-      let l2 = i + 1 < lists.length ? lists[i + 1] : null;
+      const l1 = lists[i];
+      const l2 = i + 1 < lists.length ? lists[i + 1] : null;
       mergedLists.push(mergeTwoLists(l1, l2));
     }
     lists = mergedLists;
@@ -38,8 +38,8 @@ var mergeKLists = function (lists) {
 /**
  * Standard helper to merge two sorted linked lists
  */
-var mergeTwoLists = function (l1, l2) {
-  let dummy = new ListNode(0);
+const mergeTwoLists = (l1, l2) => {
+  const dummy = new ListNode(0);
   let curr = dummy;
 
   while (l1 && l2) {
