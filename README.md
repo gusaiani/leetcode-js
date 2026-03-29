@@ -69,6 +69,7 @@ Solutions to LeetCode problems in JavaScript, each with a test suite.
 | 560  | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)                                                           | Medium     | Prefix sum + hash map  | O(n)             | O(n)         |
 | 572  | [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/)                                                       | Easy       | DFS recursion          | O(m × n)         | O(h)         |
 | 733  | [Flood Fill](https://leetcode.com/problems/flood-fill/)                                                                                 | Easy       | DFS recursion (matrix) | O(m × n)         | O(m × n)     |
+| 876  | [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/)                                                   | Easy       | Fast/slow pointers     | O(n)             | O(1)         |
 | 1235 | [Maximum Profit in Job Scheduling](https://leetcode.com/problems/maximum-profit-in-job-scheduling/)                                     | Hard       | DP + binary search     | O(n log n)       | O(n)         |
 | 3379 | [Transformed Array](https://leetcode.com/problems/transformed-array/)                                                                   | Easy       | Modular arithmetic     | O(n)             | O(n)         |
 
