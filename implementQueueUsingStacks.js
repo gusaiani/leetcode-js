@@ -22,7 +22,7 @@
  * - All the calls to pop and peek are valid.
  */
 
-var MyQueue = function () {
+const MyQueue = function () {
   this.stack1 = [];
   this.stack2 = [];
 };
