@@ -21,7 +21,7 @@
 function orangesRotting(grid) {
   const rows = grid.length;
   const cols = grid[0].length;
-  let queue = [];
+  const queue = [];
   let freshOranges = 0;
   let minutes = 0;
 
@@ -46,7 +46,7 @@ function orangesRotting(grid) {
   ];
 
   while (queue.length > 0 && freshOranges > 0) {
-    let size = queue.length;
+    const size = queue.length;
 
     for (let i = 0; i < size; i++) {
       const [r, c] = queue.shift();
@@ -56,13 +56,7 @@ function orangesRotting(grid) {
         const nc = c + dc;
 
         // Check bounds and if the neighbor is a fresh orange
-        if (
-          nr >= 0 &&
-          nr < rows &&
-          nc >= 0 &&
-          nc < cols &&
-          grid[nr][nc] === 1
-        ) {
+        if (nr >= 0 && nr < rows && nc >= 0 && nc < cols && grid[nr][nc] === 1) {
           grid[nr][nc] = 2;
           freshOranges--;
           queue.push([nr, nc]);
