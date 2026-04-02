@@ -19,10 +19,7 @@ function dailyTemperatures(temperatures) {
 
   for (let i = 0; i < n; i++) {
     // While stack is not empty AND current temp is higher than stack's top temp
-    while (
-      stack.length > 0 &&
-      temperatures[i] > temperatures[stack[stack.length - 1]]
-    ) {
+    while (stack.length > 0 && temperatures[i] > temperatures[stack[stack.length - 1]]) {
       const prevIndex = stack.pop();
       result[prevIndex] = i - prevIndex;
     }
