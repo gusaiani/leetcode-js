@@ -34,10 +34,7 @@ test("clones a connected undirected graph", () => {
   expect(cloned).not.toBe(node1);
   expect(cloned.val).toBe(1);
   expect(cloned.neighbors).toHaveLength(2);
-  expect(cloned.neighbors.map((neighbor) => neighbor.val).sort((a, b) => a - b)).toEqual([
-    2,
-    4,
-  ]);
+  expect(cloned.neighbors.map((neighbor) => neighbor.val).sort((a, b) => a - b)).toEqual([2, 4]);
   expect(cloned.neighbors[0]).not.toBe(node1.neighbors[0]);
   expect(cloned.neighbors[1]).not.toBe(node1.neighbors[1]);
 });
