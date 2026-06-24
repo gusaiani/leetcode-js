@@ -28,8 +28,8 @@ test("initial stream shorter than k", () => {
 test("handles duplicate values", () => {
   const kth = new KthLargest(2, [5, 5, 5]);
   expect(kth.add(5)).toBe(5);
-  expect(kth.add(6)).toBe(6);
-  expect(kth.add(4)).toBe(6);
+  expect(kth.add(6)).toBe(5);
+  expect(kth.add(4)).toBe(5);
 });
 
 test("k equals stream size after first adds", () => {
