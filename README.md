@@ -1,9 +1,10 @@
 ![Tests](https://github.com/gusaiani/leetcode-js/actions/workflows/test.yml/badge.svg)
 ![Lint](https://github.com/gusaiani/leetcode-js/actions/workflows/lint.yml/badge.svg)
+![Typecheck](https://github.com/gusaiani/leetcode-js/actions/workflows/typecheck.yml/badge.svg)
 
-# LeetCode in JavaScript
+# LeetCode in TypeScript
 
-Solutions to LeetCode problems in JavaScript, each with a test suite.
+Solutions to LeetCode problems in TypeScript, each with a test suite.
 
 ## Solved Problems
 
@@ -97,10 +98,12 @@ bun install
 | `bun run lint:fix`     | Auto-fix linting errors            |
 | `bun run format`       | Format all files with Biome        |
 | `bun run format:check` | Check formatting without modifying |
+| `bun run typecheck`    | Type-check with `tsc --noEmit`     |
 
 ## Code Quality
 
-- **Testing** — Every solution has a dedicated test file ([Jest](https://jestjs.io/)-compatible, run via [Bun](https://bun.sh/))
+- **Language** — [TypeScript](https://www.typescriptlang.org/) under `strict` mode; solutions and tests are `.ts` ESM modules. `tsc --noEmit` is the type gate (config in [`tsconfig.json`](./tsconfig.json)). No build step — [Bun](https://bun.sh/) runs `.ts` directly.
+- **Testing** — Every solution has a dedicated test file ([Jest](https://jestjs.io/)-compatible API, run via [Bun](https://bun.sh/)). Bun's test globals are typed via [`test-globals.d.ts`](./test-globals.d.ts).
 - **Linting & Formatting** — [Biome](https://biomejs.dev/) for linting and consistent style
-- **CI** — GitHub Actions run tests, linting, and format checks on every PR
+- **CI** — GitHub Actions run tests, linting, format checks, and type-checking on every PR
 - **Pre-push hook** — [Husky](https://typicode.github.io/husky/) blocks pushes that fail tests, linting, or formatting

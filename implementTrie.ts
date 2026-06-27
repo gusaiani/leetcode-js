@@ -1,0 +1,87 @@
+/**
+ * LeetCode 208. Implement Trie (Prefix Tree)
+ * https://leetcode.com/problems/implement-trie-prefix-tree/
+ *
+ * A trie (pronounced as "try") or prefix tree is a tree data structure used to
+ * efficiently store and retrieve keys in a dataset of strings. There are
+ * various applications of this data structure, such as autocomplete and
+ * spellchecker.
+ *
+ * Implement the Trie class:
+ *
+ * - Trie() Initializes the trie object.
+ * - void insert(String word) Inserts the string word into the trie.
+ * - boolean search(String word) Returns true if the string word is in the trie
+ *   (i.e., was inserted before), and false otherwise.
+ * - boolean startsWith(String prefix) Returns true if there is a previously
+ *   inserted string word that has the prefix prefix, and false otherwise.
+ */
+
+/*
+class Trie {
+  constructor() {
+    this.list = [];
+  }
+
+  insert(word) {
+    this.list.push(word);
+  }
+
+  search(word) {
+    return this.list.includes(word);
+  }
+
+  startsWith(prefix) {
+    return this.list.some((word) => word.startsWith(prefix));
+  }
+}
+*/
+
+class TrieNode {
+  children: Record<string, TrieNode>;
+  isEnd: boolean;
+
+  constructor() {
+    this.children = {};
+    this.isEnd = false;
+  }
+}
+
+class Trie {
+  private root: TrieNode;
+
+  constructor() {
+    this.root = new TrieNode();
+  }
+
+  insert(word: string): void {
+    let node = this.root;
+    for (const ch of word) {
+      if (!node.children[ch]) {
+        node.children[ch] = new TrieNode();
+      }
+      node = node.children[ch];
+    }
+    node.isEnd = true;
+  }
+
+  search(word: string): boolean {
+    const node = this._traverse(word);
+    return node?.isEnd ?? false;
+  }
+
+  startsWith(prefix: string): boolean {
+    return this._traverse(prefix) !== null;
+  }
+
+  private _traverse(str: string): TrieNode | null {
+    let node = this.root;
+    for (const ch of str) {
+      if (!node.children[ch]) return null;
+      node = node.children[ch];
+    }
+    return node;
+  }
+}
+
+export { Trie };

@@ -1,11 +1,15 @@
 ## Project structure
 
-- Implementation files: `/<problemName>.js` (e.g., `jumpGame.js`)
-- Test files: `/tests/<problemName>.test.js` (e.g., `tests/jumpGame.test.js`)
+- Implementation files: `/<problemName>.ts` (e.g., `jumpGame.ts`)
+- Test files: `/tests/<problemName>.test.ts` (e.g., `tests/jumpGame.test.ts`)
 - Branch name: kebab-case problem name (e.g., `number-of-islands`)
 
+The repo is TypeScript under `strict` mode. Type params and return values in the
+signature (no JSDoc `@param`/`@return` types). Bun runs `.ts` directly — no build
+step. `ListNode`/`TreeNode` helpers are ES6 classes (the LeetCode TS idiom).
+
 Implementation file template:
-```js
+```ts
 /**
  * LeetCode <number>. <Title>
  * <url>
@@ -13,18 +17,14 @@ Implementation file template:
  * <problem description>
  */
 
-/**
- * @param {<type>} <param>
- * @return {<type>}
- */
-function <functionName>(<params>) {}
+function <functionName>(<param>: <type>): <returnType> {}
 
-module.exports = { <functionName> };
+export { <functionName> };
 ```
 
-Test file template:
-```js
-const { <functionName> } = require("../<problemName>");
+Test file template (`test`/`expect` are Bun globals — typed via `test-globals.d.ts`, do not import them):
+```ts
+import { <functionName> } from "../<problemName>";
 
 test("<description>", () => {
   expect(<functionName>(<input>)).toBe(<expected>);
@@ -42,7 +42,7 @@ Use the term "Stub challenge" as a command to
 - create a branch
 - implement a test file
 - stub an implementation file for a given challenge.
-- open Cursor with the test file and the implementation file: `cursor tests/<problemName>.test.js <problemName>.js`
+- open Cursor with the test file and the implementation file: `cursor tests/<problemName>.test.ts <problemName>.ts`
 
 Do not give hints about how to solve the problem.
 
