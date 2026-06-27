@@ -1,1 +1,1 @@
-./node_modules/.bin/biome check . && npx jest
+./node_modules/.bin/biome check . && bun run typecheck && bun test
