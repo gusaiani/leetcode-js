@@ -2,20 +2,22 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "node",
+      "type": "bun",
       "request": "launch",
       "name": "Debug Tests for Current File",
-      "program": "${workspaceFolder}/node_modules/.bin/jest",
-      "args": ["--testPathPatterns", "${fileBasenameNoExtension}", "--runInBand", "--no-coverage"],
+      "program": "${file}",
+      "runtimeArgs": ["test"],
+      "cwd": "${workspaceFolder}",
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
     },
     {
-      "type": "node",
+      "type": "bun",
       "request": "launch",
       "name": "Debug All Tests",
-      "program": "${workspaceFolder}/node_modules/.bin/jest",
-      "args": ["--runInBand", "--no-coverage"],
+      "program": "${workspaceFolder}",
+      "runtimeArgs": ["test"],
+      "cwd": "${workspaceFolder}",
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
     }
